@@ -1,0 +1,18 @@
+version: '3'
+services:
+  database:
+    container_name: database
+    build: /home/ubuntu/public_content_to_aws/Dockerfiles/mysql/
+    volumes:
+      - myapp:/var/lib/mysql
+  
+  backend:
+    container_name: backend
+    build: /home/ubuntu/dolphin-server/dolphin-data-server/
+    depends_on:
+      - database
+      
+volumes:
+  myapp:
+  mymodule:
+    
