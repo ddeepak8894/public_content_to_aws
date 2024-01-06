@@ -9,8 +9,12 @@ services:
   backend:
     container_name: backend
     build: /home/ubuntu/public_content_to_aws/Dockerfiles/server/
+    ports:
+      - 4000:80
+
     depends_on:
       - database
+    
 
 volumes:
   myapp:
