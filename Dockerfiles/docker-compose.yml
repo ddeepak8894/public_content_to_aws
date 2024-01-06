@@ -9,11 +9,17 @@ services:
   backend:
     container_name: backend
     build: /home/ubuntu/public_content_to_aws/Dockerfiles/server/
-    ports:
-      - 4000:4000
-
     depends_on:
       - database
+
+  frontend:
+    container_name: frontend
+    build: /home/ubuntu/public_content_to_aws/Dockerfiles/frontend/
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+
     
 
 volumes:
