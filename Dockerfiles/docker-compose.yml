@@ -8,10 +8,10 @@ services:
   
   backend:
     container_name: backend
-    build: /home/ubuntu/dolphin-server/dolphin-data-server/
+    build: /home/ubuntu/public_content_to_aws/Dockerfiles/server/
     depends_on:
       - database
-      
+
 volumes:
   myapp:
   mymodule:
