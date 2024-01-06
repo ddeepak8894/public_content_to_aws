@@ -10,7 +10,7 @@ services:
     container_name: backend
     build: /home/ubuntu/public_content_to_aws/Dockerfiles/server/
     ports:
-      - 4000:80
+      - 4000:4000
 
     depends_on:
       - database
